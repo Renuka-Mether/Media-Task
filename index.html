@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment</title>
+    <meta name="title" content="Assignment">
+    <meta name="keywords" content="keywords goes here">
+    <meta name="description" content="description goes here">
+    <meta name="robots" content="index,follow">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="assets/css/responsive.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div>
+    <section>
+        <div class="container">
+            <form action="" name="myForm">
+                <div class="col-12" data-aos="fade-up"  data-aos-delay="600">
+                        <div class="col-6">
+                            <div class="email-add">
+                                <h3>Email Address</h3>
+                                <input type="text" name="email-id" id="add-email" required="required" placeholder="Hey, Please Enter Your Valid Email Id">
+                                <input type="submit" name="Add" value="Add"  onclick='Javascript:checkEmail();' class="btn-add hvr-bounce-out"/>
+                            </div>
+                        </div>
+                        <div class="col-6" data-aos="fade-down"  data-aos-delay="800">
+                            <div class="email-search"> 
+                                <div class="email-head">
+                                   
+                                    <input type="submit" name="search" value="search" class="btn-search hvr-bounce-out"/>
+                                    <input type="text" value="" name="" id="search-email" required>
+                                    <input type="submit" name="Go!" value="Go!" class="btn-go hvr-bounce-out"/>
+
+                                </div>
+                                <div class="check-group">
+                                    <input type="checkbox" name="show-enable" id="show-email" value="Show Enable Only" class="show-check">
+                                    <label class="check-text" for="show-email">Show Only Enabled</label>
+                                </div>
+                                <div class="email-wrapper">
+                                <div class="grid-container">
+                                    <table>
+                                        <tr>
+                                            <th>IsEnabled</th>
+                                            <th>Email</th>
+                                            <th>Delete</th>                                        
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td class="align-left"><span>spiderman@soopersticky.com</span></td>
+                                                <td><i class="fa fa-trash"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td class="align-left"><span >drstrange@soopermagic.com</span></td>
+                                                <td><i class="fa fa-trash"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td class="align-left"><span>hulk@sooperlabs.com</span></td>
+                                                <td><i class="fa fa-trash"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td class="align-left"><span >loki@sooperenemy.com</span></td>
+                                                <td><i class="fa fa-trash"></i></td>
+                                            </tr>
+                                    </table>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </form>
+        </div>
+    </section>
+  </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        AOS.init();
+      </script>
+      <script>
+        function checkEmail() {
+            var email = document.getElementById('add-email');
+            var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (!filter.test(email.value)) {
+            alert('Please provide a valid email address');
+            return false;
+            }
+        }
+      </script>
+</body>
+</html>
